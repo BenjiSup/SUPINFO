@@ -1,8 +1,22 @@
 - name: Installation du serveur web
-  hosts: tests
+  hosts: apache
   remote_user: defaults
   tasks:
     - name: Install apache
       apt: name=apache2
     - name: install  php
       apt: name=php
+      service:
+        - name: nginx
+        - state: started
+
+
+- name: Installation du serveur web
+  hosts: nginx
+  remote_user: defaults
+  tasks:
+    - name: Install nginx
+      apt: name=nginx
+      service:
+	- name: nginx
+	- state: started
