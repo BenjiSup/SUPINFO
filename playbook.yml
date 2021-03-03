@@ -2,11 +2,11 @@
   hosts: apache
   remote_user: defaults
   tasks:
-    - name: Install apache
+    - name: install apache
       apt: name=apache2
-    - name: Install php
+    - name: install php
       apt: name=php
-    - name: Start Apache
+    - name: start Apache
       service:
         - name: apache2
         - state: started
@@ -18,7 +18,7 @@
   tasks:
     - name: ensure nginx is at the latest version
       apt: name=nginx state=latest 
-    - name: Start nginx
+    - name: start nginx
       service:
         - name: nginx
         - state: started
