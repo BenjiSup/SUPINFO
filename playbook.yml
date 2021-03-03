@@ -1,0 +1,8 @@
+- name: Installation du serveur web
+  hosts: tests
+  remote_user: defaults
+  tasks:
+    - name: Install apache
+      apt: name=apache2
+    - name: install  php
+      apt: name=php
