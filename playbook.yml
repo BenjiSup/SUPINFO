@@ -16,7 +16,7 @@
 
 - name: Installation du serveur web
   hosts: nginx
-  remote_user: defaults
+  remote_user: root
   tasks:
     - name: ensure nginx is at the latest version
       apt:
