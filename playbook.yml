@@ -16,7 +16,7 @@
   hosts: nginx
   remote_user: defaults
   tasks:
-    - name: Install nginx
+    - name: ensure nginx is at the latest version
       apt: name=nginx state=latest 
     - name: Start nginx
       service:
