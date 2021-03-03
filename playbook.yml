@@ -1,6 +1,6 @@
 - name: Installation du serveur web
   hosts: apache
-  remote_user: defaults
+  remote_user: root
   tasks:
     - name: Install apache
       apt: 
