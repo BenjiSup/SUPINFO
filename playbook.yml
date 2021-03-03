@@ -4,7 +4,7 @@
   tasks:
     - name: install apache
       apt: name=apache2
-    - name: install  php
+    - name: install php
       apt: name=php
     - name: Start Apache
       service:
