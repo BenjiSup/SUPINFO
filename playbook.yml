@@ -2,7 +2,7 @@
   hosts: apache
   remote_user: defaults
   tasks:
-    - name: Install apache
+    - name: install apache
       apt: name=apache2
     - name: install  php
       apt: name=php
